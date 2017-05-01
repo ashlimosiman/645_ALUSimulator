@@ -1,5 +1,5 @@
-#ifndef ALU_SIMULATOR_H
-#define ALU_SIMULATOR_H
+#ifndef _ALU_SIMULATOR_H
+#define _ALU_SIMULATOR_H
 
 #include <stdio.h>
 #include <time.h>
