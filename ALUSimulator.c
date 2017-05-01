@@ -20,18 +20,7 @@ void ALUSimulator(RegisterFile theRegisterFile, uint32_t OpCode, uint32_t Rs, ui
                     break;
                case 6://SRLV
                     Rd = Rt >> Rs;
-               case 16://MFHI
-
-               case 18://MFLO
-
-               case 24://MULT
-
-               case 25://MULTU
-
-               case 26://DIV
-
-               case 27://DIVU
-
+                    break;
                case 32://ADD
                     Rd = Rs + Rt;
                     break;
