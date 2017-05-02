@@ -63,6 +63,7 @@ void ALUSimulator(RegisterFile theRegisterFile, uint32_t OpCode, uint32_t Rs, ui
                          {
                               Rd = 0;
                          }
+                         break;
                     case 43://SLTU
                          if((unsigned)Rs < (unsigned)Rt)
                          {
@@ -72,6 +73,7 @@ void ALUSimulator(RegisterFile theRegisterFile, uint32_t OpCode, uint32_t Rs, ui
                          {
                               Rd = 0;
                          }
+                         break;
                }//end of "functionCode" switch
                break;
 
