@@ -64,7 +64,7 @@ void ALUSimulator(RegisterFile theRegisterFile, uint32_t OpCode, uint32_t Rs, ui
                               Rd = 0;
                          }
                     case 43://SLTU
-                         if(Rd < Rt)//should be different from SLT?
+                         if((unsigned)Rs < (unsigned)Rt)
                          {
                               Rd = 1;
                          }
@@ -90,10 +90,27 @@ void ALUSimulator(RegisterFile theRegisterFile, uint32_t OpCode, uint32_t Rs, ui
                }
                break;
           case 9://ADDIU
+               Rd=Rs+ImmediateValue;
                break;
           case 10://SLTI
+               if(Rs < ImmediateValue)
+               {
+                    Rd = 1;
+               }
+               else
+               {
+                    Rd = 0;
+               }
                break;
           case 11://SLTIU
+               if((unsigned)Rs < (unsigned)ImmediateValue)
+               {
+                    Rd = 1;
+               }
+               else
+               {
+                    Rd = 0;
+               }
                break;
      }//end of "opCode" switch
 
